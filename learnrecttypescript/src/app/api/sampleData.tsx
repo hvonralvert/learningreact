@@ -1,4 +1,4 @@
-export const sampleData = [
+export const sampleData:IEvent[] = [
     {
         id: '1',
         title: 'Trip to Empire State building',
@@ -46,3 +46,22 @@ export const sampleData = [
         ]
     }
 ];
+
+export interface IEvent{
+    id: string;
+    title: string;
+    date: string;
+    category: string;
+    description: string;
+    city: string;
+    venue: string;
+    hostedBy: string;
+    hostPhotoURL: string;
+    attendees: IAttendes[]
+}
+
+interface IAttendes{
+        id: string;
+        name: string;
+        photoURL: string;
+}
